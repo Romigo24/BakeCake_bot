@@ -107,7 +107,8 @@ class Order(models.Model):
     order_type = models.CharField(verbose_name='Тип заказа', max_length=17, choices=order_types, default=Ordering,)
 
     def __str__(self):
-        return self.delivery_time.isoformat(timespec='minutes')
+        date_value =  self.delivery_time.isoformat(timespec='minutes') if self.delivery_time else 'Дата не установлена'
+        return f"{date_value}"
     
     class Meta:
         verbose_name = 'Заказ'

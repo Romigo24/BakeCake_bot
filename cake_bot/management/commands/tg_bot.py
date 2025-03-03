@@ -74,7 +74,7 @@ def start(update: Update, context: CallbackContext) -> int:
         update.message.reply_text(
             f' Здравствуйте, {user.first_name}! '
             ' Вас приветствует магазин "Тортов"! '
-            ' У нас вы можете закакзть готовый торт или создать свой ',
+            ' У нас вы можете заказать готовый торт или создать свой ',
             reply_markup=ReplyKeyboardMarkup(main_keyboard, resize_keyboard=True, one_time_keyboard=True)
         )
     except:
