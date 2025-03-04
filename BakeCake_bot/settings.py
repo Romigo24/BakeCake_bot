@@ -26,13 +26,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'REPLACE_ME')     #'django-insecure-v_lkwjn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True')
 
-# ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', [])
-ALLOWED_HOSTS = [
-       'bakecakebot-production.up.railway.app',
-       '127.0.0.1',
-       'localhost'
-   ]
-
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS')
 
 # Application definition
 
@@ -55,11 +49,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
-CSRF_TRUSTED_ORIGINS = [
-       'https://bakecakebot-production.up.railway.app',
-       'http://bakecakebot-production.up.railway.app',  # Если используете http
-   ]
 
 ROOT_URLCONF = 'BakeCake_bot.urls'
 
