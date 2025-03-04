@@ -56,6 +56,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+       'https://bakecakebot-production.up.railway.app',
+       'http://bakecakebot-production.up.railway.app',  # Если используете http
+   ]
+
 ROOT_URLCONF = 'BakeCake_bot.urls'
 
 TEMPLATES = [
